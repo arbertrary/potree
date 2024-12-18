@@ -279,6 +279,15 @@ export class Sidebar{
 			}
 		));
 
+		// REMOVE ALL ANNOTATIONS
+		elToolbar.append(this.createToolIcon(
+			Potree.resourcePath + '/icons/reset_annotations.svg',
+			'[title]tt.remove_all_annotations',
+			() => {
+				this.viewer.scene.annotations.removeAllChildren();
+			}
+		));
+
 
 		{ // SHOW / HIDE Measurements
 			let elShow = $("#measurement_options_show");
